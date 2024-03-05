@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Finance Tracker</title>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="finance.html"><img src="images/logo.png.png" alt=""></a>    
+            <div class="nav-links">
+                <ul>
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="">LOGIN</a></li>
+                    <li><a href="">SIGN UP</a></li>
+                    <li><a href="">SUPPORT</a></li>
+                   
+                </ul>
+            </div> 
+        </nav>
+    </section>
+</body>
+    <style>
+        body {
+            background-color: rgb(102, 160, 203) ;
+            font-family: lucida bright , sans-serif;
+            margin: 0;
+            padding: 20px;
+            
+        }
+    
+        #app {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #1dc141;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+    
+        }
+
+        button:hover {
+            background-color: #25c23f;
+        }
+
+        #transaction-list {
+            margin-top: 20px;
+        }
+
+        .transaction {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .transaction:last-child {
+            border-bottom: none;
+        }
+
+        #total {
+            font-weight: bold;
+        }
+
+        #total-income {
+            font-weight: bold;
+            color: #eb0b0b; /* red color for total income label */
+        }
+    </style>
+</head>
+<body>
+    <h1>Finance Tracker</h1>
+    
+    <div>
+        <label for="initial-balance">Initial Balance:</label>
+        <input type="text" id="initial-balance">
+        <button onclick="setInitialBalance()">Set Initial Balance</button>
+    </div>
+
+    <div style="margin-top: 10px;">
+        <label for="description">Description:</label>
+        <input type="text" id="description">
+    </div>
+    
+    <div>
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount">
+    </div>
+    
+    <button onclick="addTransaction()">Add Transaction</button>
+    
+    <h2>Transaction List</h2>
+    <div id="transaction-list"></div>
+    
+    <h3>Total Income: <span id="total-income">$0.00</span></h3>
+    <h3>Total Expenses: <span id="total-expenses">$0.00</span></h3>
+    <h3>Available Balance: <span id="available-balance">$0.00</span></h3>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+
+  
